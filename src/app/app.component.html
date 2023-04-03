@@ -1,4 +1,4 @@
-<div *ngFor="let card of cards" class="card">
+<div *ngFor="let card of cards; let i = index" class="card">
   <div class="card-content">
     <h2 class="card-title">Name: {{ card.name }} </h2>
     <p class="card-info">Email: {{ card.email }}</p>
@@ -8,4 +8,7 @@
   </div>
 
   <button (click)="duplicateCard(card)">Duplicate</button>
+  <br>
+  <br>
+  <button (click)="deleteCard(i)">Delete</button>
 </div>
